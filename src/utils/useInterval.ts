@@ -7,7 +7,7 @@ export enum IntervalStatus {
 
 export function useInterval() {
   const [status, setStatus] = useState(IntervalStatus.Off);
-  const [id, setId] = useState<NodeJS.Timer | null>(null);
+  const [id, setId] = useState<number | null>(null);
 
   const stop = useCallback(() => {
     setId((prevId) => {
@@ -32,7 +32,7 @@ export function useInterval() {
         const diff = currentTime - startTime;
 
         onTick(diff);
-      }, intervalAmount);
+      }, intervalAmount) as unknown as number;
 
       setId(newId);
       setStatus(IntervalStatus.On);
