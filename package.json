@@ -1,0 +1,48 @@
+{
+  "name": "typing-test",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "pnpm run lint:types",
+    "lint:types": "tsc",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "preview": "vite preview",
+    "format": "prettier --write .",
+    "prepare": "husky install"
+  },
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Eyal Lapid",
+    "url": "https://eyallapid.me"
+  },
+  "dependencies": {
+    "@babel/core": "^7.19.3",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mantine/core": "^5.5.5",
+    "@mantine/hooks": "^5.5.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@types/uuid": "^8.3.4",
+    "@vitejs/plugin-react": "^2.1.0",
+    "@vitest/coverage-c8": "^0.24.3",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0",
+    "vitest": "^0.24.3"
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx,css,md}": "prettier --write"
+  }
+}
